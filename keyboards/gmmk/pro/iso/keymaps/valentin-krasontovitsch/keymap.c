@@ -79,8 +79,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         G(KC_NUBS), G(KC_1),    G(KC_2),    G(KC_3),    G(KC_4),    G(KC_5),    G(KC_6),    G(KC_7),    G(KC_8),    G(KC_9),    G(KC_0),    G(KC_MINS), G(KC_EQL),  G(KC_BSPC),            G(KC_DEL),
         G(KC_TAB),  G(KC_Q),    G(KC_W),    G(KC_E),    G(KC_R),    G(KC_T),    G(KC_Y),    G(KC_U),    G(KC_I),    G(KC_O),    G(KC_P),    XP(aa, AA), G(KC_RBRC),                        G(KC_PGUP),
         G(KC_CAPS), G(KC_A),    G(KC_S),    G(KC_D),    G(KC_F),    G(KC_G),    G(KC_H),    G(KC_J),    G(KC_K),    G(KC_L),    XP(oe, OE), XP(ae, AE), G(KC_NUHS), G(KC_ENT),             G(KC_PGDN),
-        G(KC_LSFT), G(KC_GRV),  G(KC_Z),    G(KC_X),    G(KC_C),    G(KC_V),    G(KC_B),    G(KC_N),    G(KC_M),    G(KC_COMM), G(KC_DOT),  G(KC_SLSH),             G(KC_RSFT), G(KC_UP),  G(KC_END),
-        G(KC_LCTL), G(KC_LGUI), G(KC_LALT),                            G(KC_SPC),                                   G(KC_RALT), KC_NO,      G(KC_RCTL), G(KC_LEFT), G(KC_DOWN), G(KC_RGHT)
+        G(KC_LSFT), G(KC_GRV),  G(KC_Z),    G(KC_X),    G(KC_C),    G(KC_V),    G(KC_B),    G(KC_N),    G(KC_M),    G(KC_COMM), G(KC_DOT),  G(KC_SLSH),             G(KC_RSFT), KC_PGUP,  G(KC_END),
+        G(KC_LCTL), G(KC_LGUI), G(KC_LALT),                            G(KC_SPC),                                   G(KC_RALT), KC_NO,      G(KC_RCTL), KC_HOME, KC_PGDN,    KC_END
     ),
 
 
