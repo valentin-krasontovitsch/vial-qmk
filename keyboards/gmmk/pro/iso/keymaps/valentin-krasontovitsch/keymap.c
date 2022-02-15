@@ -36,7 +36,11 @@ const uint32_t PROGMEM unicode_map[] = {
 
 // custom key codes
 enum custom_keycodes {
-  WIN_WIN = SAFE_RANGE
+  MY_WIN = SAFE_RANGE,
+  MY_HOME,
+  MY_END,
+  MY_PGUP,
+  MY_PGDN
 };
 
 // clang-format off
@@ -67,7 +71,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_LBRC, KC_RBRC,                   KC_PGUP,
         KC_CAPS, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT, KC_NUHS, KC_ENT,           KC_PGDN,
         KC_LSFT, KC_GRV,  KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,          KC_RSFT, KC_UP,   KC_END,
-        KC_LCTL, WIN_WIN, KC_LALT,                            KC_SPC,                             KC_RALT, MO(1),   KC_RCTL, KC_LEFT, KC_DOWN, KC_RGHT
+        KC_LCTL, MY_WIN,  KC_LALT,                            KC_SPC,                             KC_RALT, MO(1),   KC_RCTL, KC_LEFT, KC_DOWN, KC_RGHT
     ),
 
     [1] = LAYOUT(
@@ -84,18 +88,28 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         G(KC_NUBS), G(KC_1),    G(KC_2),    G(KC_3),    G(KC_4),    G(KC_5),    G(KC_6),    G(KC_7),    G(KC_8),    G(KC_9),    G(KC_0),    G(KC_MINS), G(KC_EQL),  G(KC_BSPC),            G(KC_DEL),
         G(KC_TAB),  G(KC_Q),    G(KC_W),    G(KC_E),    G(KC_R),    G(KC_T),    G(KC_Y),    G(KC_U),    G(KC_I),    G(KC_O),    G(KC_P),    XP(aa, AA), G(KC_RBRC),                        G(KC_PGUP),
         G(KC_CAPS), G(KC_A),    G(KC_S),    G(KC_D),    G(KC_F),    G(KC_G),    G(KC_H),    G(KC_J),    G(KC_K),    G(KC_L),    XP(oe, OE), XP(ae, AE), G(KC_NUHS), G(KC_ENT),             G(KC_PGDN),
-        G(KC_LSFT), G(KC_GRV),  G(KC_Z),    G(KC_X),    G(KC_C),    G(KC_V),    G(KC_B),    G(KC_N),    G(KC_M),    G(KC_COMM), G(KC_DOT),  G(KC_SLSH),             G(KC_RSFT), KC_PGUP,  G(KC_END),
-        G(KC_LCTL), KC_TRNS,    G(KC_LALT),                            G(KC_SPC),                                   G(KC_RALT), KC_NO,      G(KC_RCTL), KC_HOME, KC_PGDN,    KC_END
+        G(KC_LSFT), G(KC_GRV),  G(KC_Z),    G(KC_X),    G(KC_C),    G(KC_V),    G(KC_B),    G(KC_N),    G(KC_M),    G(KC_COMM), G(KC_DOT),  G(KC_SLSH),             G(KC_RSFT), MY_PGUP,   G(KC_END),
+        G(KC_LCTL), KC_TRNS,    G(KC_LALT),                            G(KC_SPC),                                   G(KC_RALT), KC_NO,      G(KC_RCTL),             MY_HOME,    MY_PGDN,   MY_END
     ),
 
 
 };
 // clang-format on
 
+void process_layered_arrows(uint16_t keycode, keyrecord_t *record) {
+    if (record->event.pressed) {
+        unregister_code(KC_LGUI);
+        register_code(keycode);
+    } else {
+        unregister_code(keycode);
+        register_code(KC_LGUI);
+    }
+}
+
 // custom WIN key - use to toggle and send WIN at the same time
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case WIN_WIN:
+        case MY_WIN:
             if (record->event.pressed) {
                 register_code(KC_LGUI);
                 layer_on(2);
@@ -103,6 +117,18 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 layer_off(2);
                 unregister_code(KC_LGUI);
             }
+            break;
+        case MY_HOME:
+            process_layered_arrows(KC_HOME, record);
+            break;
+        case MY_END:
+            process_layered_arrows(KC_END, record);
+            break;
+        case MY_PGDN:
+            process_layered_arrows(KC_PGDN, record);
+            break;
+        case MY_PGUP:
+            process_layered_arrows(KC_PGUP, record);
             break;
     }
     return true;
