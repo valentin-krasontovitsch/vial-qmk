@@ -58,7 +58,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // Press Fn+N to toggle between 6KRO and NKRO. This setting is persisted to the EEPROM and thus persists between restarts.
     [0] = LAYOUT(
         KC_ESC,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_PSCR,          KC_MUTE,
-        KC_NUBS, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS, KC_EQL,  KC_BSPC,          KC_DEL,
+        KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS, KC_EQL,  KC_BSPC,          KC_DEL,
         KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_LBRC, KC_RBRC,                   KC_PGUP,
         KC_CAPS, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT, KC_NUHS, KC_ENT,           KC_PGDN,
         KC_LSFT, KC_GRV,  KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,          KC_RSFT, KC_UP,   KC_END,
@@ -76,7 +76,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [2] = LAYOUT(
         G(KC_ESC),  G(KC_F1),   G(KC_F2),   G(KC_F3),   G(KC_F4),   G(KC_F5),   G(KC_F6),   G(KC_F7),   G(KC_F8),   G(KC_F9),   G(KC_F10),  G(KC_F11),  G(KC_F12),  G(KC_PSCR),            G(KC_MUTE),
-        G(KC_NUBS), G(KC_1),    G(KC_2),    G(KC_3),    G(KC_4),    G(KC_5),    G(KC_6),    G(KC_7),    G(KC_8),    G(KC_9),    G(KC_0),    G(KC_MINS), G(KC_EQL),  G(KC_BSPC),            G(KC_DEL),
+        G(KC_GRV),  G(KC_1),    G(KC_2),    G(KC_3),    G(KC_4),    G(KC_5),    G(KC_6),    G(KC_7),    G(KC_8),    G(KC_9),    G(KC_0),    G(KC_MINS), G(KC_EQL),  G(KC_BSPC),            G(KC_DEL),
         G(KC_TAB),  G(KC_Q),    G(KC_W),    G(KC_E),    G(KC_R),    G(KC_T),    G(KC_Y),    G(KC_U),    G(KC_I),    G(KC_O),    G(KC_P),    XP(aa, AA), G(KC_RBRC),                        G(KC_PGUP),
         G(KC_CAPS), G(KC_A),    G(KC_S),    G(KC_D),    G(KC_F),    G(KC_G),    G(KC_H),    G(KC_J),    G(KC_K),    G(KC_L),    XP(oe, OE), XP(ae, AE), G(KC_NUHS), G(KC_ENT),             G(KC_PGDN),
         G(KC_LSFT), G(KC_GRV),  G(KC_Z),    G(KC_X),    G(KC_C),    G(KC_V),    G(KC_B),    G(KC_N),    G(KC_M),    G(KC_COMM), G(KC_DOT),  G(KC_SLSH),             G(KC_RSFT), G(KC_UP),  G(KC_END),
