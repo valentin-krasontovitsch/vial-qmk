@@ -1,0 +1,3 @@
+qmk compile -kb gmmk/pro/iso -km valentin-krasontovitsch
+to put into dfu bootloader mode, plug in while pressing ESC
+qmk flash
