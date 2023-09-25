@@ -1,0 +1,9 @@
+to compile, run
+
+```
+qmk compile -kb gmmk/pro/iso -km valentin-krasontovitsch
+```
+
+fn + backspace to set keyboard to flushable state
+check with `lsusb`
+flash with `qmk flash`
