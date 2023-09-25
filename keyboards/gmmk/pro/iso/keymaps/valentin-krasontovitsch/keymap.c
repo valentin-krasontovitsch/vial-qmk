@@ -66,19 +66,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [1] = LAYOUT(
-        _______, KC_MYCM, KC_WHOM, KC_CALC, KC_MSEL, KC_MPRV, KC_MNXT, KC_MPLY, KC_MSTP, KC_MUTE, KC_VOLD, KC_VOLU, KC_F20,  _______,          _______,
-        _______, RGB_TOG, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, RESET,            _______,
-        _______, _______, RGB_VAI, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,                   _______,
-        _______, _______, RGB_VAD, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______,
-        _______, _______, _______, RGB_HUI, _______, _______, _______, NK_TOGG, _______, _______, _______, _______,          _______, RGB_MOD, _______,
-        _______, _______, _______,                            _______,                            _______, _______, _______, RGB_SPD, RGB_RMOD, RGB_SPI
+        _______, KC_MYCM, KC_WHOM, KC_CALC, KC_MSEL, KC_MPRV, KC_MNXT, KC_MPLY, KC_MSTP, KC_MUTE, KC_VOLD,    KC_VOLU,    KC_F20,  _______,          _______,
+        _______, RGB_TOG, _______, _______, _______, _______, _______, _______, _______, _______, _______,    _______,    _______, RESET,            _______,
+        _______, _______, RGB_VAI, _______, _______, _______, _______, _______, _______, _______, _______,    XP(aa, AA), _______,                   _______,
+        _______, _______, RGB_VAD, _______, _______, _______, _______, _______, _______, _______, XP(oe, OE), XP(ae, AE), _______, _______,          _______,
+        _______, _______, _______, RGB_HUI, _______, _______, _______, NK_TOGG, _______, _______, _______,    _______,             _______, RGB_MOD, _______,
+        _______, _______, _______,                            _______,                            _______,    _______,    _______, RGB_SPD, RGB_RMOD, RGB_SPI
     ),
 
     [2] = LAYOUT(
         G(KC_ESC),  G(KC_F1),   G(KC_F2),   G(KC_F3),   G(KC_F4),   G(KC_F5),   G(KC_F6),   G(KC_F7),   G(KC_F8),   G(KC_F9),   G(KC_F10),  G(KC_F11),  G(KC_F12),  G(KC_PSCR),            G(KC_MUTE),
         G(KC_GRV),  G(KC_1),    G(KC_2),    G(KC_3),    G(KC_4),    G(KC_5),    G(KC_6),    G(KC_7),    G(KC_8),    G(KC_9),    G(KC_0),    G(KC_MINS), G(KC_EQL),  G(KC_BSPC),            G(KC_DEL),
-        G(KC_TAB),  G(KC_Q),    G(KC_W),    G(KC_E),    G(KC_R),    G(KC_T),    G(KC_Y),    G(KC_U),    G(KC_I),    G(KC_O),    G(KC_P),    XP(aa, AA), G(KC_RBRC),                        G(KC_PGUP),
-        G(KC_CAPS), G(KC_A),    G(KC_S),    G(KC_D),    G(KC_F),    G(KC_G),    G(KC_H),    G(KC_J),    G(KC_K),    G(KC_L),    XP(oe, OE), XP(ae, AE), G(KC_NUHS), G(KC_ENT),             G(KC_PGDN),
+        G(KC_TAB),  G(KC_Q),    G(KC_W),    G(KC_E),    G(KC_R),    G(KC_T),    G(KC_Y),    G(KC_U),    G(KC_I),    G(KC_O),    G(KC_P),    G(KC_LBRC), G(KC_RBRC),                        G(KC_PGUP),
+        G(KC_CAPS), G(KC_A),    G(KC_S),    G(KC_D),    G(KC_F),    G(KC_G),    G(KC_H),    G(KC_J),    G(KC_K),    G(KC_L),    G(KC_SCLN), G(KC_QUOT), G(KC_NUHS), G(KC_ENT),             G(KC_PGDN),
         G(KC_LSFT), G(KC_GRV),  G(KC_Z),    G(KC_X),    G(KC_C),    G(KC_V),    G(KC_B),    G(KC_N),    G(KC_M),    G(KC_COMM), G(KC_DOT),  G(KC_SLSH),             G(KC_RSFT), G(KC_UP),  G(KC_END),
         G(KC_LCTL), G(KC_LGUI), G(KC_LALT),                            G(KC_SPC),                                   G(KC_RALT), KC_NO,      G(KC_RCTL), G(KC_LEFT), G(KC_DOWN), G(KC_RGHT)
     ),
