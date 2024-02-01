@@ -4,6 +4,10 @@ to compile, run
 qmk compile -kb gmmk/pro/iso -km valentin-krasontovitsch
 ```
 
-fn + backspace to set keyboard to flushable state
-check with `lsusb`
+disconnect keyboard, and reconnect while holding `fn + backspace` to set
+keyboard to flushable state
+
+check that keyboard is ready with `lsusb` on linux,
+or use `system_profiler SPUSBDataType` on mac (bootloader string should appear)
+
 flash with `qmk flash`
