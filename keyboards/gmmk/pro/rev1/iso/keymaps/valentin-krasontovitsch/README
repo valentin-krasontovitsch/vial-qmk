@@ -7,7 +7,7 @@ source ~/code/py-venvs/qmk/bin/activate
 to compile, run
 
 ```
-qmk compile -kb gmmk/pro/iso -km valentin-krasontovitsch
+qmk compile -kb gmmk/pro/rev1/iso -km valentin-krasontovitsch
 ```
 
 disconnect keyboard, and reconnect while holding `fn + backspace` to set
