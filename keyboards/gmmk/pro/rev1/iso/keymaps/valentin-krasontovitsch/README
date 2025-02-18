@@ -1,3 +1,9 @@
+first source the correct venv
+
+```
+source ~/code/py-venvs/qmk/bin/activate
+```
+
 to compile, run
 
 ```
